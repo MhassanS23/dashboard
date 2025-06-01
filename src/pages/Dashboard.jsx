@@ -10,13 +10,14 @@ export default function Dashboard() {
   const [dataBook, setDataBook] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getBooking = async () => {
     setLoading(true);
     setError("");
     try {
       const res = await axios.get(
-        `/api/m_dashboard_direksi.php?action=intern_test`
+        `${API_URL}/m_dashboard_direksi.php?action=intern_test`
       );
       setDataBook(res.data);
     } catch (err) {
