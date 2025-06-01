@@ -9,20 +9,16 @@ import BookingTarget from "../components/chart/BookingTarget";
 export default function Dashboard() {
   const [dataBook, setDataBook] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const API_URL = import.meta.env.VITE_API_URL;
 
   const getBooking = async () => {
     setLoading(true);
-    setError("");
     try {
       const res = await axios.get(
-        `${API_URL}/m_dashboard_direksi.php?action=intern_test`
+        `/api/m_dashboard_direksi.php?action=intern_test`
       );
       setDataBook(res.data);
     } catch (err) {
       console.error(err);
-      setError("Gagal memuat data booking.");
     } finally {
       setLoading(false);
     }
@@ -55,8 +51,6 @@ export default function Dashboard() {
         <div className="text-center text-white h-screen w-full flex justify-center items-center">
           Loading data...
         </div>
-      ) : error ? (
-        <div className="text-center text-red-500 mt-20">{error}</div>
       ) : !dataBook || mergedData.length === 0 ? (
         <div className="text-center text-white mt-20">Tidak ada data.</div>
       ) : (
