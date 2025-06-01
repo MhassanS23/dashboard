@@ -1,3 +1,4 @@
+// React
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../App.css";
@@ -7,9 +8,11 @@ import Navbar from "../components/Navbar";
 import BookingTarget from "../components/chart/BookingTarget";
 
 export default function Dashboard() {
+  // State
   const [dataBook, setDataBook] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Function
   const getBooking = async () => {
     setLoading(true);
     try {
@@ -23,11 +26,12 @@ export default function Dashboard() {
       setLoading(false);
     }
   };
-
+  // UseEffect
   useEffect(() => {
     getBooking();
   }, []);
 
+  // Gabungan Data
   const mergedData =
     dataBook?.dataTarget?.map((targetItem) => {
       const bookingItem = dataBook.dataTargetBooking.find(

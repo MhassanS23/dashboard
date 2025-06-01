@@ -1,10 +1,7 @@
-import React from "react";
-import { FaDownload } from "react-icons/fa";
+// Utils
 import { formatRupiah } from "../../utils/formatRupiah";
 
 export default function AkadCard({ item }) {
-  const API_URL = import.meta.env.VITE_API_URL;
-
   return (
     <div className="bg-white rounded-xl shadow-md flex flex-col gap-2 hover:shadow-lg transition-shadow">
       <div className="bg-[#1F7D53] text-white text-md w-full flex items-center justify-center rounded-xl py-2">

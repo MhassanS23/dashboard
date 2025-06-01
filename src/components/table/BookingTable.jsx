@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+// Utils
 import { formatRupiah } from "../../utils/formatRupiah";
-import { FaDownload } from "react-icons/fa";
 import { formatNama } from "../../utils/formatNama";
+// Icons
+import { FaDownload } from "react-icons/fa";
 
 export default function BookingTable({ data }) {
   return (

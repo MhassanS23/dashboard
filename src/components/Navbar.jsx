@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
+// React
+import { useState, useEffect } from "react";
 
 // Components
 import Drawer from "./Drawer";
 
 export default function Navbar() {
-  // STATE
+  // State
   const [navActive, setNavActive] = useState(false);
 
-  // FUNCTION
+  // Function
   const changeNav = () => {
     window.scrollY >= 30 ? setNavActive(true) : setNavActive(false);
   };
 
-  // USEEFFECT
+  // UseEffect
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
 

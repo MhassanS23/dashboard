@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from "react";
+// React
+import { useState, useEffect } from "react";
 import axios from "axios";
+
 import "../App.css";
 
 // Components
 import Navbar from "../components/Navbar";
 import AkadCard from "../components/card/AkadCard";
 import AkadTable from "../components/table/AkadTable";
-// import BookingTable from "../components/table/BookingTable";
 
 function Akad() {
+  // State
   const [dataBook, setDataBook] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Function
   const getBooking = async () => {
     setLoading(true);
     try {
@@ -26,6 +29,7 @@ function Akad() {
     }
   };
 
+  // UseEffect
   useEffect(() => {
     getBooking();
   }, []);

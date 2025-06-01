@@ -1,4 +1,7 @@
+// React
 import { useState } from "react";
+
+// UI
 import {
   Dialog,
   DialogBackdrop,
@@ -6,10 +9,13 @@ import {
   DialogTitle,
   TransitionChild,
 } from "@headlessui/react";
+
+// Icons
 import { IoMdClose } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Drawer() {
+  // State
   const [open, setOpen] = useState(false);
 
   return (

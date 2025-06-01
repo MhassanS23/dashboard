@@ -1,4 +1,4 @@
-import React from "react";
+// Chartjs
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -12,7 +12,6 @@ import {
   Filler,
 } from "chart.js";
 
-// Registrasi ChartJS
 ChartJS.register(
   CategoryScale,
   LinearScale,

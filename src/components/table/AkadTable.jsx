@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// Utils
 import { formatRupiah } from "../../utils/formatRupiah";
 
 export default function AkadTable({ data }) {

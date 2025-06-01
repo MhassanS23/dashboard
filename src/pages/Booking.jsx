@@ -1,3 +1,4 @@
+// React
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../App.css";
@@ -8,9 +9,11 @@ import BookingCard from "../components/card/BookingCard";
 import BookingTable from "../components/table/BookingTable";
 
 export default function Booking() {
+  // State
   const [dataBook, setDataBook] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Function
   const getBooking = async () => {
     setLoading(true);
     try {
@@ -25,6 +28,7 @@ export default function Booking() {
     }
   };
 
+  // UseEffect
   useEffect(() => {
     getBooking();
   }, []);

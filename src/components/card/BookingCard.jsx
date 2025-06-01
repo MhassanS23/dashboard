@@ -1,6 +1,8 @@
-import React from "react";
+// Assets
 import avatar from "../../assets/avatar.png";
+// Icons
 import { FaDownload } from "react-icons/fa";
+// Utils
 import { formatRupiah } from "../../utils/formatRupiah";
 
 export default function BookingCard({ item }) {
